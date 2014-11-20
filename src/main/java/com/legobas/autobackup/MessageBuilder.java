@@ -135,11 +135,11 @@ public class MessageBuilder {
 
 		sb.append("HTTP/1.1 200 OK");
 		sb.append(Constants.CRLF);
-		sb.append("Content-Length: " + String.valueOf(xml.length()));
+		sb.append("Content-Length: " + String.valueOf(xml.length()+138));
 		sb.append(Constants.CRLF);
 		sb.append("Content-Type: text/xml; charset=\"UTF-8\"");
 		sb.append(Constants.CRLF);
-		sb.append("Date: " + getHttpDate()); // Wed, 28 May 2014 10:26:40 GMT
+		sb.append("Date: " + getHttpDate()); // example: Wed, 28 May 2014 10:26:40 GMT
 		sb.append(Constants.CRLF);
 		sb.append("Server: DMRND/0.5");
 		sb.append(Constants.CRLF);

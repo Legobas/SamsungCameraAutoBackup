@@ -37,7 +37,9 @@ public class HttpServer extends Thread {
 		while (this.listener != null) {
 			Socket socket = null;
 			try {
+logger.debug("accept");
 				socket = this.listener.accept();
+logger.debug("read");
 				BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 
 				String textLine;
@@ -114,6 +116,7 @@ public class HttpServer extends Thread {
 				}
 			}
 		}
+		logger.debug("HTTP Server stopped");
 	}
 
 	public static void startServer() {

@@ -170,6 +170,7 @@ public class SsdpMSearch extends Thread {
 				}
 			}
 		}
+		logger.debug("SSDP MSEARCH Server stopped");
 	}
 
 	@Override
